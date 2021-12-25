@@ -1,0 +1,151 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #222;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+}
+
+p {
+  font-weight: 800;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 3em auto;
+  padding: 1em;
+  width: 90%;
+}
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+  }
+}
+.container .title {
+  text-align: center;
+  font-size: 2rem;
+  color: #f4f4f4;
+}
+.container .card {
+  max-width: 550px;
+  margin: 2em auto;
+  position: relative;
+  padding: 1em;
+  box-shadow: 0 0 0.3em 0.2em #f5f5f5, 0 0 0.5em 0.3em #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1em;
+  color: #f5f5f5;
+}
+.container .card::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background-image: linear-gradient(to top, #00beed, darkblue);
+  z-index: -1;
+  filter: blur(20px);
+}
+.container .icons, .container .icon {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.container .icon + .icon {
+  margin-left: 10px;
+}
+.container .icons, .container .icon {
+  gap: 5px;
+}
+.container .details {
+  text-align: center;
+}
+.container .details .temperature {
+  font-size: clamp(1.8rem,5vw,3rem);
+  margin-bottom: 0.3em;
+}
+.container .details .country__city, .container .details .desc {
+  font-size: clamp(1.3rem,5vw,2rem);
+}
+.container .sub__details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: space-around;
+  font-size: clamp(1rem,5vw,1.3rem);
+}
+.container .details > * {
+  margin-bottom: 0.5em;
+}
+.container .btn {
+  display: inline-block;
+  padding: 0.75em 1em;
+  font-size: 1.1rem;
+  background: darkblue;
+  margin-top: 1em;
+  border-radius: 0.5em;
+  border: 0;
+  font-family: "Poppins", sans-serif;
+  color: #f5f5f5;
+  cursor: pointer;
+  transition: opacity 250ms ease-in;
+}
+.container .btn:hover {
+  opacity: 0.8;
+}
+
+.model {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background: rgba(0, 0, 0, 0.9);
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  color: #f5f5f5;
+  display: none;
+}
+.model .model_title {
+  text-align: center;
+}
+.model .model-body {
+  box-shadow: 0 0 2px 2px #ccc;
+  padding: 1em;
+  width: min(400px, 90%);
+  background-image: linear-gradient(to top, #222, darkblue);
+  border-radius: 1em;
+}
+.model label, .model input {
+  display: block;
+  margin-bottom: 0.5em;
+}
+.model input[type=text] {
+  padding: 0.75em 1em;
+  width: 100%;
+  border-radius: 0.5em;
+  border: 0;
+  color: #111;
+  outline: 0;
+  font-size: 1.1rem;
+}
+.model .green {
+  background: green;
+}
+.model .red {
+  background: orangered;
+  margin-left: 0.6em;
+}/*# sourceMappingURL=style.css.map */
