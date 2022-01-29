@@ -1,7 +1,7 @@
 class Storage{
     constructor(){
-        this.defaultCity='Boston';
-        this.defaultCountry='US';
+        this.defaultCity='Colombo';
+        this.defaultCountry='LK';
         this.city;
         this.country;
     }
